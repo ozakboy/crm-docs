@@ -1,45 +1,45 @@
-﻿# Customer API Documentation
+﻿#CRM系統 Customer API Documentation
 
 ## Save Customer Data
 
-Save or update customer information.
+保存或更新客戶信息。
 
-### Endpoint
+### 端點
 
 ```
 POST /api/Customer/SaveData
 ```
 
-### Request Body
+### 請求正文
 
 Content-Type: application/json
 
-| Field | Type | Description | Required | 
+| 欄位 | 類型 | 描述 | 必填 | 
 |-------|------|-------------|----------|
-| caseName | string | 案名 | Yes |
-| name | string | 姓名 | Yes |
-| phone | string | 电话 | Yes |
-| email | string | Email | No |
-| inDate | string (date-time) | 填写时间 | Yes |
-| source | string | 来源 FB / IG / EDM | Yes |
-| adSource | string | 广告来源 | Yes |
-| remark | string | 备注 | No |
-| contactTime | string | 联络时间 | No |
-| q1 | string | 问题一 | No |
-| q2 | string | 问题二 | No |
-| q3 | string | 问题三 | No |
-| q4 | string | 问题四 | No |
-| q5 | string | 问题五 | No |
-| q6 | string | 问题六 | No |
-| q7 | string | 问题七 | No |
-| q8 | string | 问题八 | No |
+| caseName | string | 案名 | 是 |
+| name | string | 姓名 | 是 |
+| phone | string | 電話 | 是 |
+| email | string | Email | 否 |
+| inDate | string (date-time) | 填寫時間 | 是 |
+| source | string | 來源 FB / IG / EDM | 是 |
+| adSource | string | 廣告來源 | 是 |
+| remark | string | 備註 | 否 |
+| contactTime | string | 聯絡時間 | 否 |
+| q1 | string | 問題一 | 否 |
+| q2 | string | 問題二 | 否 |
+| q3 | string | 問題三 | 否 |
+| q4 | string | 問題四 | 否 |
+| q5 | string | 問題五 | 否 |
+| q6 | string | 問題六 | 否 |
+| q7 | string | 問題七 | 否 |
+| q8 | string | 問題八 | 否 |
 
-### Sample Request
+### 範例請求
 
 ```json
 {
   "caseName": "Test",
-  "name": "测试人",
+  "name": "測試人",
   "phone": "0900293291",
   "email": "Test@test.com.w",
   "inDate": "2022-11-24T14:08:19.505Z",
@@ -47,24 +47,24 @@ Content-Type: application/json
   "adSource": "EDM",
   "remark": "TestAPI",
   "contactTime": "2022-11-24",
-  "Q1":"问题一",
-  "Q2":"问题二",
-  "Q3":"问题三",
-  "Q4":"问题四",
-  "Q5":"问题五",
-  "Q6":"问题六",
-  "Q7":"问题七",
-  "Q8":"问题八"
+  "Q1":"問題一",
+  "Q2":"問題二",
+  "Q3":"問題三",
+  "Q4":"問題四",
+  "Q5":"問題五",
+  "Q6":"問題六",
+  "Q7":"問題七",
+  "Q8":"問題八"
 }
 ```
 
-### Response
+### 回應
 
-#### Success Response
+#### 成功回應
 
-**Code**: 200
+**代碼**: 200
 
-**Content**: 
+**內容**: 
 ```json
 {
   "caseName": "string",
@@ -87,8 +87,8 @@ Content-Type: application/json
 }
 ```
 
-### Notes
+### 注意事項
 
-- The `phone` field should match the pattern: `^([0-9]{10})$`
-- All date-time fields should be in ISO 8601 format
-- The `source` field should be one of: FB, IG, or EDM
+- `phone` 欄位應符合以下模式：`^([0-9]{10})$`
+- 所有日期時間欄位應採用 ISO 8601 格式
+- `source` 欄位應為以下之一：FB、IG 或 EDM
